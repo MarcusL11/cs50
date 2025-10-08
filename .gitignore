@@ -8,4 +8,4 @@
 !*.md
 !*.gitignore
 !Makefile
-
+!*.txt

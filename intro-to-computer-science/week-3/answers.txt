@@ -1,0 +1,35 @@
+sort1 uses: Bubble Sort
+
+How do you know?:
+Faster than selection sort for sorted data.
+Slower than merge sort for large random data.
+Faster than Merge sort on small sorted data but not large sorted data.
+- random5000:   0m0.039s
+- random10000:  0m0.127s
+- random50000:  0m2.326s
+- sorted5000:   0m0.020s
+- sorted50000:  0m2.196s
+- reversed5000: 0m0.040s
+
+
+sort2 uses: Merge Sort
+
+How do you know?:
+Because it is the Fastest and performs well with larger dataset
+- random5000:   0m0.021s
+- random10000:  0m0.042s
+- random50000:  0m0.426s
+- sorted5000:   0m0.038s
+- sorted50000:  0m0.416s
+- reversed5000: 0m0.020s
+
+sort3 uses: Selection Sort
+
+How do you know?:
+Because is the Slowest. Time does not improve much more for sorted data.
+- random5000:   0m0.054s
+- random10000:  0m0.207s
+- random50000:  0m5.598s
+- sorted5000:   0m0.029s
+- sorted50000:  0m0.466s
+- reversed5000: 0m0.087s
