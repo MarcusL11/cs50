@@ -162,6 +162,10 @@ void sort_pairs(void) {
 }
 
 // Recursive function checking if locking a pair creates a cycle
+// start is the starting node of the cycle
+// end is the current node being checked
+// Returns true if a cycle is found, false otherwise
+// Helper function for lock_pairs
 bool causes_cycle(int start, int end) {
   if (end == start) {
     return true;
@@ -209,8 +213,3 @@ void print_winner(void) {
   }
   return;
 }
-
-// a ranked-choice voting method that’s guaranteed to produce the Condorcet
-// winner of the election if one exists. In a file called tideman.c in a
-// folder called tideman, create a program to simulate an election by the
-// Tideman voting method.
