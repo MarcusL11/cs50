@@ -9,3 +9,5 @@
 !*.gitignore
 !Makefile
 !*.txt
+*keys
+*texts
