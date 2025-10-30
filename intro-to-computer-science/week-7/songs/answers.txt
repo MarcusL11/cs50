@@ -1,0 +1,7 @@
+Create a list of aura categories defined min and max values for each measurement factors (i.e valence, energy, tempo, and danceability).
+Then take an average of the top 100 songs' values for each the factors to determine the category aura that the user falls into.
+The way this aura is calculated might not be very representative of the listener because it does not factor the time. For example,
+a user may listen to songs at the beginning of the year that accounts for majority of their songs, but towards the end of the year
+they switch to a different style of songs.  The more recent songs should have a higher weight as it would represent a more
+current mood and aura of the person that the songs played earlier in the year.
+

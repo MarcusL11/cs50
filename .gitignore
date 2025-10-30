@@ -11,5 +11,6 @@
 !*.txt
 !*.py
 !*.csv
+!*.sql
 *keys
 *texts
