@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            function checkPartOne(event) {
+
+                // Get the triggered element
+                let button = event.target;
+                let partOneFeedback = document.querySelector('#feedback-pt1');
+
+                // Check if triggered element is correct
+                if (button.id === "button1") {
+                    button.style.backgroundColor = 'Green';
+                    partOneFeedback.innerHTML = 'Correct!';
+                } else {
+                    button.style.backgroundColor = 'Red';
+                    partOneFeedback.innerHTML = 'Incorrect!';
+                }
+            }
+
+            function checkPartTwo(event) {
+
+                let button = event.target;
+                let input = document.querySelector('input');
+                let partTwoFeedback = document.querySelector('#feedback-pt2');
+
+                // Check if input is 'Switzerland'
+                if (input.value === 'Switzerland') {
+                    input.style.backgroundColor = 'Green';
+                    partTwoFeedback.innerHTML = 'Correct!';
+                } else {
+                    input.style.backgroundColor = 'Red';
+                    partTwoFeedback.innerHTML = 'Incorrect!';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                 <button id="button1" onclick="checkPartOne(event)">1 sheep per 6 people</button>
+                 <button id="button2" onclick="checkPartOne(event)">1 sheep per 2 people</button>
+                 <button id="button3" onclick="checkPartOne(event)">3 sheep per 1 people</button>
+                 <button id="button4" onclick="checkPartOne(event)">1 sheep per 3 people</button>
+                 <p id="feedback-pt1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <input />
+                <button onclick="checkPartTwo(event)">1 sheep per 3 people</button>
+                <p id="feedback-pt2"></p>
+            </div>
+        </div>
+    </body>
+</html>
+

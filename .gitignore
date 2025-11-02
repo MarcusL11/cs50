@@ -12,5 +12,10 @@
 !*.py
 !*.csv
 !*.sql
+!*.html
+!*.css
+!*.js
 *keys
 *texts
+*src
+venv
