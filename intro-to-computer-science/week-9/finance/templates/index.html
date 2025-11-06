@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+    <h2>Portfolio Summary</h2>
+    <p>User: {{ username }}</p>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Stock</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Total Value</th>
+            </tr>
+            {% for stock in stocks %}
+                <tr>
+                    <td>{{ stock.symbol }}</td>
+                    <td>{{ stock.total_shares }}</td>
+                    <td>{{ stock.price }}</td>
+                    <td>{{ stock.total_value }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <p> Cash: {{ cash_balance }}</p>
+    <p> Total: {{ grand_total }}</p>
+    <form action="/" method="post">
+        <input name="cash" type="text" placeholder="intput numbers only" />
+        <button type="submit">Add Cash</button>
+    </form>
+
+{% endblock %}
+

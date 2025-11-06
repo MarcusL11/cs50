@@ -1,0 +1,29 @@
+
+{% extends "layout.html" %}
+
+{% block title %}Sell{% endblock %}
+
+{% block main %}
+<!--
+Requirements:
+ - [x] implemented as a select menu whose name is symbol.
+ - [x] user input a number of shares, implemented as a text field whose name is shares.
+ - Upon completion, redirect the user to the home page.
+-->
+    <form action="/sell" method="post">
+        <div class="mb-3">
+            <select name="symbol">
+                <option value="--" disabled>Select Stock</option>
+                {% for stock in current_stocks %}
+                    <option value="{{ stock.symbol }}">{{ stock.symbol }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="shares" placeholder="Number of shares" type="text">
+        </div>
+        <div class="mb-3">
+            <button class="form-control mx-auto w-auto" type="submit">Sell</button>
+        </div>
+    </form>
+{% endblock %}
